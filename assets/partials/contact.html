@@ -1,0 +1,27 @@
+<section class="contact">
+  <h2>Page de contact</h2>
+  <form name="form">
+
+    <label for="name">Nom : </label>
+    <input type="text" id="name" name="name" ng-model="userName" ng-pattern="regexName" ng-keyup="testName()" />
+    <div ng-show="resultTestNameError" ng-hide="resultTestNameValid" class="errorSkins">Entrez un nom valide !</div><br />
+
+
+    <label for="email">E-Mail : </label>
+    <input type="email" id="email" name="email" ng-model="userEmail" ng-pattern="regexMail" ng-keyup="testMail()" />
+    <div ng-show="resultTestMailError" ng-hide="resultTestMailValid" class="errorSkins">Entrez un email valide !</div><br />
+
+
+    <label for="subject">Sujet : </label>
+    <input type="text" id="subject" name="subject" ng-model="userSubject" ng-pattern="regexSubject" ng-keyup="testSubject()" />
+    <div ng-show="resultTestSubjectError" ng-hide="resultTestSubjectValid" class="errorSkins">Mauvaise saisie !</div><br />
+
+
+    <div>
+    <label for="msg">Message : </label><br />
+    <textarea name="msg" type="text" rows="8" cols="80"></textarea>
+    </div>
+
+    <button type="button" name="button" ng-submit="foo1()">Envoyer</button>
+  </form>
+</section>
